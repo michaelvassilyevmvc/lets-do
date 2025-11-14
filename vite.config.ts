@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import VueRouter from 'unplugin-vue-router/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Components from 'unplugin-vue-components/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -30,6 +31,7 @@ export default defineConfig({
       dts: true,
       viteOptimizeDeps: true,
     }),
+    Components({ /* options */ }),
     vueDevTools(),
   ],
   resolve: {
